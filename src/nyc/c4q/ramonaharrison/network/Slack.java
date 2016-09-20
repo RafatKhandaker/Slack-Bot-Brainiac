@@ -33,11 +33,9 @@ public class Slack {
     private static final String ENDPOINT_POST_MESSAGE = "chat.postMessage";
     private static final String ENDPOINT_DELETE_MESSAGE = "chat.delete";
 
+    public static String BOTS_CHANNEL_ID = getChannel();
 
 
-    public static final String BOTS_CHANNEL_ID = getChannel();
-
-    
     /**
      * Static method to test the Slack API.
      *
@@ -121,9 +119,13 @@ public class Slack {
         return new DeleteMessageResponse(HTTPS.get(deleteMessageUrl));
     }
 
+    /** Rafat: Created a useful method to set a delay timer
+     *
+     * @param x
+     */
     public static void delay(int x) {
         try {
-            Thread.sleep(1000 * x);                 //1000 milliseconds is one second.
+            Thread.sleep(6000 * x);                 //1000 milliseconds is one second.
         } catch (InterruptedException ex) {
             Thread.currentThread().interrupt();
         }

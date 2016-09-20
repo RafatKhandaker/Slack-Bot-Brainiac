@@ -52,40 +52,40 @@ public class Channel {
         }
 
         if (json.get("last_read") != null) {
-            this.lastRead = (String) json.get("last_read");
-        }
+        this.lastRead = (String) json.get("last_read");
+    }
 
         if (json.get("topic") != null) {
-            this.topic = new Topic((JSONObject) json.get("topic"));
-        }
+        this.topic = new Topic((JSONObject) json.get("topic"));
+    }
 
         if (json.get("purpose") != null) {
-            this.purpose = new Purpose((JSONObject) json.get("purpose"));
-        }
+        this.purpose = new Purpose((JSONObject) json.get("purpose"));
+    }
 
         if (json.get("members") != null) {
-            JSONArray membersArray = (JSONArray) json.get("members");
-            this.members = new ArrayList<String>();
-            for (int i = 0; i < membersArray.size(); i++) {
-                this.members.add((String) membersArray.get(i));
-            }
+        JSONArray membersArray = (JSONArray) json.get("members");
+        this.members = new ArrayList<String>();
+        for (int i = 0; i < membersArray.size(); i++) {
+            this.members.add((String) membersArray.get(i));
         }
+    }
 
         if (json.get("latest") != null) {
-            this.latest = new Message((JSONObject) json.get("latest"));
-        }
+        this.latest = new Message((JSONObject) json.get("latest"));
+    }
 
         if (json.get("is_archived") != null) {
-            this.isArchived = (Boolean) json.get("is_archived");
-        }
+        this.isArchived = (Boolean) json.get("is_archived");
+    }
 
         if (json.get("is_general") != null) {
-            this.isGeneral = (Boolean) json.get("is_general");
-        }
+        this.isGeneral = (Boolean) json.get("is_general");
+    }
 
         if (json.get("is_channel") != null) {
-            this.isChannel = (Boolean) json.get("is_channel");
-        }
+        this.isChannel = (Boolean) json.get("is_channel");
+    }
 
         if (json.get("is_member") != null) {
             this.isMember = (Boolean) json.get("is_member");

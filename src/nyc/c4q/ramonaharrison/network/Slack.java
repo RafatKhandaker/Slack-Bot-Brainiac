@@ -37,13 +37,7 @@ public class Slack {
 
     public static final String BOTS_CHANNEL_ID = getChannel();
 
-
-
-
-
-
-
-
+    
     /**
      * Static method to test the Slack API.
      *

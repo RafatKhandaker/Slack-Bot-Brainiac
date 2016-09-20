@@ -39,8 +39,8 @@ public class Main {
         myBot.listMessages(Slack.BOTS_CHANNEL_ID);
 
         Slack.sendMessage("Welcome to Brainiac, All hail Brainiac, All will be One with Brainiac!");
-        Slack.sendMessage(extractChannel.extractChannel().toString());
-        Slack.sendMessage(channelHop.startAlert());
+
+        channelHop.startAlert();
 
     }
 }

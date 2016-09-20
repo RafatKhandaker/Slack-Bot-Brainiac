@@ -6,10 +6,14 @@ import nyc.c4q.ramonaharrison.network.response.*;
 import nyc.c4q.ramonaharrison.util.Token;
 import org.json.simple.JSONObject;
 
+
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.List;
+
+import static nyc.c4q.ramonaharrison.channelHop.*;
+import static nyc.c4q.ramonaharrison.channelHop.channel;
 
 /**
  * Created by Ramona Harrison
@@ -31,7 +35,7 @@ public class Slack {
 
 
 
-    public static final String BOTS_CHANNEL_ID = channelHop.channel;
+    public static final String BOTS_CHANNEL_ID = getChannel();
 
 
 

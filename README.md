@@ -25,7 +25,7 @@ The following setup steps only need to be completed **once per team**:
 ## Requirements
 1. Form a clear picture of the project requirements. Spend some time reading through:
     - This readme doc.
-    - The [Slack Web API docs](https://api.slack.com/web) and [Basic message formatting guidelines](https://api.slack.com/docs/message-formatting).
+    - The [Slack Web API docs](x) and [Basic message formatting guidelines](https://api.slack.com/docs/message-formatting).
     - The code that has been provided in the `SlackBot` project -- particulary the Slack.java class, which provides methods that your bot can use to interact with Slack's Web API.
     - Use the IntelliJ TODO panel (⌘6) to navigate to each of the project TODOs.
 

@@ -1,5 +1,6 @@
 package nyc.c4q.ramonaharrison.network;
 
+import nyc.c4q.ramonaharrison.channelHop;
 import nyc.c4q.ramonaharrison.model.Attachment;
 import nyc.c4q.ramonaharrison.network.response.*;
 import nyc.c4q.ramonaharrison.util.Token;
@@ -28,13 +29,23 @@ public class Slack {
     private static final String ENDPOINT_POST_MESSAGE = "chat.postMessage";
     private static final String ENDPOINT_DELETE_MESSAGE = "chat.delete";
 
-    public static final String BOTS_CHANNEL_ID = "C2ABKERFT";
+
+
+    public static final String BOTS_CHANNEL_ID = channelHop.channel;
+
+
+
+
+
+
+
 
     /**
      * Static method to test the Slack API.
      *
      * @return the Response indicating ok/error or null if the connection failed.
      */
+
     public static Response testApi() {
         URL testUrl = HTTPS.stringToURL(BASE_URL + ENDPOINT_TEST  + "?token=" + API_KEY);
 
@@ -110,5 +121,13 @@ public class Slack {
         URL deleteMessageUrl = HTTPS.stringToURL(BASE_URL + ENDPOINT_DELETE_MESSAGE + "?token=" + API_KEY + "&channel=" + BOTS_CHANNEL_ID + "&ts=" + messageTs);
 
         return new DeleteMessageResponse(HTTPS.get(deleteMessageUrl));
+    }
+
+    public static void delay(int x) {
+        try {
+            Thread.sleep(1000 * x);                 //1000 milliseconds is one second.
+        } catch (InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
     }
 }

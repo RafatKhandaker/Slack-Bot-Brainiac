@@ -13,7 +13,7 @@ import java.util.List;
  *
  */
 
-public class Bot {
+public class Bot{
     // TODO: implement your bot logic!
 
     public Bot() {
@@ -23,6 +23,7 @@ public class Bot {
     /**
      * Sample method: tests the Slack API. Prints a message indicating success or failure.
      */
+
     public void testApi() {
         Response apiTest = Slack.testApi();
         System.out.println("API OK: " +apiTest.isOk() + "\n");
@@ -31,6 +32,7 @@ public class Bot {
     /**
      * Sample method: prints all public AccessCode3-3 channel names and ids. Prints an error message on failure.
      */
+
     public void listChannels() {
         ListChannelsResponse listChannelsResponse = Slack.listChannels();
 
@@ -52,6 +54,7 @@ public class Bot {
      *
      * @param channelId id of the given channel.
      */
+
     public void listMessages(String channelId) {
         ListMessagesResponse listMessagesResponse = Slack.listMessages(channelId);
 

@@ -1,18 +1,9 @@
 package nyc.c4q.ramonaharrison;
 
-import javafx.scene.control.Alert;
-import nyc.c4q.ramonaharrison.model.Field;
-import nyc.c4q.ramonaharrison.model.User;
 import nyc.c4q.ramonaharrison.network.Slack;
-import nyc.c4q.ramonaharrison.network.response.ListChannelsResponse;
-import nyc.c4q.ramonaharrison.network.response.extractChannel;
-
-import java.util.HashMap;
 import java.util.Random;
-import java.util.List;
 import java.util.ArrayList;
 
-import static nyc.c4q.ramonaharrison.alertLevel.*;
 
 
 public class Main {
